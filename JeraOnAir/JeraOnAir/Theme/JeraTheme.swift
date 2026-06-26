@@ -9,7 +9,7 @@ enum JeraTheme {
     static let textSecondary = Color.white.opacity(0.65)
     static let currentTimeLine = Color.red.opacity(0.55)
 
-    static let stageHeight: CGFloat = 100
+    static let stageHeight: CGFloat = 82
     static let timeHeaderHeight: CGFloat = 36
     static let slotWidth: CGFloat = 9
     static let cornerRadius: CGFloat = 10

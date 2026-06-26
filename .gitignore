@@ -8,3 +8,4 @@ build/
 .flowdeck/
 .asc/
 build/
+.npm-cache

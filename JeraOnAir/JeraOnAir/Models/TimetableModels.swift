@@ -92,7 +92,17 @@ struct DayTimetable: Decodable {
                 )
             }
         }
-        .sorted { $0.startDate(in: self) < $1.startDate(in: self) }
+        .sorted { lhs, rhs in
+            let leftStart = lhs.startDate(in: self)
+            let rightStart = rhs.startDate(in: self)
+            if leftStart != rightStart {
+                return leftStart < rightStart
+            }
+            if lhs.stageName != rhs.stageName {
+                return lhs.stageName.localizedStandardCompare(rhs.stageName) == .orderedAscending
+            }
+            return lhs.performance.name.localizedStandardCompare(rhs.performance.name) == .orderedAscending
+        }
     }
 }
 
@@ -117,7 +127,7 @@ struct Performance: Decodable, Identifiable, Hashable {
     let gridColumn: Int
     let gridSpan: Int
 
-    var id: Int { bandId }
+    var id: String { "\(bandId)-\(gridColumn)" }
 
     func startDate(in timetable: DayTimetable) -> Date {
         let offsetSeconds = Double((gridColumn - 1) * timetable.slotMinutes * 60)
@@ -130,7 +140,7 @@ struct ScheduledPerformance: Identifiable, Hashable {
     let stageName: String
     let performance: Performance
 
-    var id: Int { performance.bandId }
+    var id: String { "\(stageID)-\(performance.bandId)-\(performance.gridColumn)" }
 
     func startDate(in timetable: DayTimetable) -> Date {
         performance.startDate(in: timetable)
