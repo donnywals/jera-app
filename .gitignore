@@ -6,3 +6,5 @@ build/
 *.ipa
 *.dSYM.zip
 .flowdeck/
+.asc/
+build/

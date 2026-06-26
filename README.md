@@ -46,6 +46,41 @@ python3 JeraOnAir/Scripts/update_timetable.py
 
 Then rebuild the app in Xcode.
 
+## TestFlight (donnywals.com BV)
+
+`asc` (App Store Connect CLI) is used for App Store Connect automation.
+
+1. Install and authenticate:
+
+```bash
+brew install asc
+asc auth login \
+  --name donnywals \
+  --key-id "YOUR_KEY_ID" \
+  --issuer-id "YOUR_ISSUER_ID" \
+  --private-key "/path/to/AuthKey_XXXX.p8" \
+  --network
+```
+
+Create the API key at [App Store Connect → Users and Access → Integrations → API](https://appstoreconnect.apple.com/access/integrations/api) with access to the **donnywals.com BV** team (`4JMM8JMG3H`).
+
+2. Create the App Store Connect app record and bundle ID:
+
+```bash
+./JeraOnAir/Scripts/create-appstore-app.sh
+```
+
+3. Build, upload, and distribute to TestFlight:
+
+```bash
+./JeraOnAir/Scripts/testflight.sh
+```
+
+The Xcode project is configured for:
+
+- Team: `4JMM8JMG3H` (donnywals.com BV / Maxine team)
+- Bundle ID: `com.donnywals.jeraonair`
+
 ## Project layout
 
 - `JeraOnAir/JeraOnAirApp.swift` — app entry point
