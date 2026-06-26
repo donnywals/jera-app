@@ -1,0 +1,1705 @@
+{
+  "days": {
+    "THU": {
+      "startTimestamp": 1782475200,
+      "endTimestamp": 1782518400,
+      "slotMinutes": 5,
+      "timeLabels": [
+        {
+          "gridColumn": 1,
+          "label": "14:00"
+        },
+        {
+          "gridColumn": 13,
+          "label": "15:00"
+        },
+        {
+          "gridColumn": 25,
+          "label": "16:00"
+        },
+        {
+          "gridColumn": 37,
+          "label": "17:00"
+        },
+        {
+          "gridColumn": 49,
+          "label": "18:00"
+        },
+        {
+          "gridColumn": 61,
+          "label": "19:00"
+        },
+        {
+          "gridColumn": 73,
+          "label": "20:00"
+        },
+        {
+          "gridColumn": 85,
+          "label": "21:00"
+        },
+        {
+          "gridColumn": 97,
+          "label": "22:00"
+        },
+        {
+          "gridColumn": 109,
+          "label": "23:00"
+        },
+        {
+          "gridColumn": 121,
+          "label": "00:00"
+        },
+        {
+          "gridColumn": 133,
+          "label": "01:00"
+        },
+        {
+          "gridColumn": 145,
+          "label": "02:00"
+        }
+      ],
+      "stages": [
+        {
+          "id": "eagle",
+          "name": "Eagle",
+          "columnCount": 144,
+          "performances": [
+            {
+              "bandId": 47,
+              "name": "Architects",
+              "time": "00:00 - 01:00",
+              "gridColumn": 121,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 51,
+              "name": "Boundaries",
+              "time": "15:00 - 15:30",
+              "gridColumn": 13,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 107,
+              "name": "Decapitated",
+              "time": "16:00 - 16:50",
+              "gridColumn": 25,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 86,
+              "name": "Set It Off",
+              "time": "18:00 - 18:50",
+              "gridColumn": 49,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 39,
+              "name": "Alexisonfire",
+              "time": "20:00 - 20:50",
+              "gridColumn": 73,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 41,
+              "name": "Trivium",
+              "time": "22:00 - 22:50",
+              "gridColumn": 97,
+              "gridSpan": 10
+            }
+          ]
+        },
+        {
+          "id": "vulture",
+          "name": "Vulture",
+          "columnCount": 144,
+          "performances": [
+            {
+              "bandId": 59,
+              "name": "Dying Wish",
+              "time": "15:30 - 16:00",
+              "gridColumn": 19,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 101,
+              "name": "Wargasm",
+              "time": "17:00 - 17:50",
+              "gridColumn": 37,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 44,
+              "name": "Bury Tomorrow",
+              "time": "19:00 - 19:50",
+              "gridColumn": 61,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 81,
+              "name": "Pennywise",
+              "time": "21:00 - 21:50",
+              "gridColumn": 85,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 32,
+              "name": "Rise Against",
+              "time": "23:00 - 23:50",
+              "gridColumn": 109,
+              "gridSpan": 10
+            }
+          ]
+        },
+        {
+          "id": "buzzard",
+          "name": "Buzzard",
+          "columnCount": 144,
+          "performances": [
+            {
+              "bandId": 102,
+              "name": "Ways Away",
+              "time": "15:30 - 16:00",
+              "gridColumn": 19,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 110,
+              "name": "Whispers",
+              "time": "17:00 - 17:45",
+              "gridColumn": 37,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 61,
+              "name": "Fiddlehead",
+              "time": "19:00 - 19:50",
+              "gridColumn": 61,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 75,
+              "name": "Madball",
+              "time": "21:00 - 21:50",
+              "gridColumn": 85,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 54,
+              "name": "Converge",
+              "time": "23:00 - 23:50",
+              "gridColumn": 109,
+              "gridSpan": 10
+            }
+          ]
+        },
+        {
+          "id": "hawk",
+          "name": "Hawk",
+          "columnCount": 144,
+          "performances": [
+            {
+              "bandId": 43,
+              "name": "Basement",
+              "time": "00:00 - 01:00",
+              "gridColumn": 121,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 88,
+              "name": "Speedway",
+              "time": "15:00 - 15:30",
+              "gridColumn": 13,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 80,
+              "name": "Nevertel",
+              "time": "16:00 - 16:50",
+              "gridColumn": 25,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 83,
+              "name": "Quicksand",
+              "time": "18:00 - 18:50",
+              "gridColumn": 49,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 93,
+              "name": "The Ataris",
+              "time": "20:00 - 20:50",
+              "gridColumn": 73,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 96,
+              "name": "The Menzingers",
+              "time": "22:00 - 22:50",
+              "gridColumn": 97,
+              "gridSpan": 10
+            }
+          ]
+        },
+        {
+          "id": "sparrow",
+          "name": "Sparrow",
+          "columnCount": 144,
+          "performances": [
+            {
+              "bandId": 140,
+              "name": "Rotzak",
+              "time": "15:30 - 16:00",
+              "gridColumn": 19,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 152,
+              "name": "Domain",
+              "time": "16:30 - 17:00",
+              "gridColumn": 31,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 153,
+              "name": "Feels Like Heaven",
+              "time": "17:45 - 18:15",
+              "gridColumn": 46,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 141,
+              "name": "The Smith Street Band",
+              "time": "18:45 - 19:30",
+              "gridColumn": 58,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 154,
+              "name": "TSS",
+              "time": "20:15 - 21:00",
+              "gridColumn": 76,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 137,
+              "name": "Aurorawave",
+              "time": "21:45 - 22:30",
+              "gridColumn": 94,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 138,
+              "name": "De Rooie Jager",
+              "time": "22:45 - 23:50",
+              "gridColumn": 106,
+              "gridSpan": 13
+            },
+            {
+              "bandId": 139,
+              "name": "NØFX",
+              "time": "23:50 - 01:00",
+              "gridColumn": 119,
+              "gridSpan": 14
+            }
+          ]
+        },
+        {
+          "id": "raven",
+          "name": "Raven",
+          "columnCount": 144,
+          "performances": [
+            {
+              "bandId": 170,
+              "name": "Dynamo Heavy Bingo",
+              "time": "15:00 - 18:00",
+              "gridColumn": 13,
+              "gridSpan": 36
+            },
+            {
+              "bandId": 169,
+              "name": "Emo Night Mainland",
+              "time": "18:00 - 01:00",
+              "gridColumn": 49,
+              "gridSpan": 84
+            }
+          ]
+        },
+        {
+          "id": "quail",
+          "name": "Quail",
+          "columnCount": 144,
+          "performances": [
+            {
+              "bandId": 171,
+              "name": "Sad Songs Club Thursday",
+              "time": "15:00 - 19:15",
+              "gridColumn": 13,
+              "gridSpan": 51
+            },
+            {
+              "bandId": 176,
+              "name": "LoMalo",
+              "time": "19:15 - 20:00",
+              "gridColumn": 64,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 171,
+              "name": "Sad Songs Club Thursday",
+              "time": "20:00 - 20:30",
+              "gridColumn": 73,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 178,
+              "name": "Riethamer Rekords",
+              "time": "20:30 - 21:00",
+              "gridColumn": 79,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 173,
+              "name": "Cold Grip",
+              "time": "21:00 - 21:30",
+              "gridColumn": 85,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 171,
+              "name": "Sad Songs Club Thursday",
+              "time": "21:30 - 23:00",
+              "gridColumn": 91,
+              "gridSpan": 18
+            }
+          ]
+        },
+        {
+          "id": "nightingale",
+          "name": "Nightingale",
+          "columnCount": 144,
+          "performances": [
+            {
+              "bandId": 171,
+              "name": "Sad Songs Club Thursday",
+              "time": "00:00 - 04:00",
+              "gridColumn": 121,
+              "gridSpan": 48
+            }
+          ]
+        },
+        {
+          "id": "nozemturbotempel",
+          "name": "Nozem Turbo Tempel",
+          "columnCount": 144,
+          "performances": [
+            {
+              "bandId": 184,
+              "name": "Pruuf Mar",
+              "time": "19:30 - 20:00",
+              "gridColumn": 67,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 185,
+              "name": "Sing Along Riot",
+              "time": "21:00 - 21:30",
+              "gridColumn": 85,
+              "gridSpan": 6
+            }
+          ]
+        },
+        {
+          "id": "impericonsigningsessions",
+          "name": "Impericon Signing Sessions",
+          "columnCount": 144,
+          "performances": [
+            {
+              "bandId": 44,
+              "name": "Bury Tomorrow",
+              "time": "15:00 - 15:45",
+              "gridColumn": 13,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 75,
+              "name": "Madball",
+              "time": "17:00 - 17:30",
+              "gridColumn": 37,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 59,
+              "name": "Dying Wish",
+              "time": "19:00 - 19:30",
+              "gridColumn": 61,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 101,
+              "name": "Wargasm",
+              "time": "20:00 - 20:30",
+              "gridColumn": 73,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 32,
+              "name": "Rise Against",
+              "time": "21:00 - 21:30",
+              "gridColumn": 85,
+              "gridSpan": 6
+            }
+          ]
+        }
+      ],
+      "title": "Thursday",
+      "shortTitle": "Thu",
+      "date": "2026-06-25"
+    },
+    "FRI": {
+      "startTimestamp": 1782464400,
+      "endTimestamp": 1782522000,
+      "slotMinutes": 5,
+      "timeLabels": [
+        {
+          "gridColumn": 1,
+          "label": "11:00"
+        },
+        {
+          "gridColumn": 13,
+          "label": "12:00"
+        },
+        {
+          "gridColumn": 25,
+          "label": "13:00"
+        },
+        {
+          "gridColumn": 37,
+          "label": "14:00"
+        },
+        {
+          "gridColumn": 49,
+          "label": "15:00"
+        },
+        {
+          "gridColumn": 61,
+          "label": "16:00"
+        },
+        {
+          "gridColumn": 73,
+          "label": "17:00"
+        },
+        {
+          "gridColumn": 85,
+          "label": "18:00"
+        },
+        {
+          "gridColumn": 97,
+          "label": "19:00"
+        },
+        {
+          "gridColumn": 109,
+          "label": "20:00"
+        },
+        {
+          "gridColumn": 121,
+          "label": "21:00"
+        },
+        {
+          "gridColumn": 133,
+          "label": "22:00"
+        },
+        {
+          "gridColumn": 145,
+          "label": "23:00"
+        },
+        {
+          "gridColumn": 157,
+          "label": "00:00"
+        },
+        {
+          "gridColumn": 169,
+          "label": "01:00"
+        },
+        {
+          "gridColumn": 181,
+          "label": "02:00"
+        },
+        {
+          "gridColumn": 193,
+          "label": "03:00"
+        }
+      ],
+      "stages": [
+        {
+          "id": "eagle",
+          "name": "Eagle",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 30,
+              "name": "The Offspring",
+              "time": "00:00 - 01:00",
+              "gridColumn": 157,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 45,
+              "name": "Allt",
+              "time": "12:45 - 13:25",
+              "gridColumn": 22,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 100,
+              "name": "TX2",
+              "time": "14:15 - 14:55",
+              "gridColumn": 40,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 104,
+              "name": "Annisokay",
+              "time": "16:00 - 16:50",
+              "gridColumn": 61,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 42,
+              "name": "Alkaline Trio",
+              "time": "18:00 - 18:50",
+              "gridColumn": 85,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 69,
+              "name": "Hollywood Undead",
+              "time": "20:00 - 20:50",
+              "gridColumn": 109,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 48,
+              "name": "A Day To Remember",
+              "time": "22:00 - 22:50",
+              "gridColumn": 133,
+              "gridSpan": 10
+            }
+          ]
+        },
+        {
+          "id": "vulture",
+          "name": "Vulture",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 67,
+              "name": "Heriot",
+              "time": "12:00 - 12:40",
+              "gridColumn": 13,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 78,
+              "name": "Melrose Avenue",
+              "time": "13:30 - 14:10",
+              "gridColumn": 31,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 68,
+              "name": "Ho99o9",
+              "time": "15:00 - 15:50",
+              "gridColumn": 49,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 98,
+              "name": "Thrown",
+              "time": "17:00 - 17:50",
+              "gridColumn": 73,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 82,
+              "name": "Periphery",
+              "time": "19:00 - 19:50",
+              "gridColumn": 97,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 91,
+              "name": "Suicidal Tendencies",
+              "time": "21:00 - 21:50",
+              "gridColumn": 121,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 49,
+              "name": "Ice Nine Kills",
+              "time": "23:00 - 23:50",
+              "gridColumn": 145,
+              "gridSpan": 10
+            }
+          ]
+        },
+        {
+          "id": "buzzard",
+          "name": "Buzzard",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 108,
+              "name": "Curselifter",
+              "time": "12:00 - 12:40",
+              "gridColumn": 13,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 64,
+              "name": "Gridiron",
+              "time": "13:30 - 14:10",
+              "gridColumn": 31,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 66,
+              "name": "Haywire",
+              "time": "15:00 - 15:50",
+              "gridColumn": 49,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 73,
+              "name": "King 810",
+              "time": "17:00 - 17:50",
+              "gridColumn": 73,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 70,
+              "name": "Ignite",
+              "time": "19:00 - 19:50",
+              "gridColumn": 97,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 56,
+              "name": "Destroy Boys",
+              "time": "21:00 - 21:50",
+              "gridColumn": 121,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 77,
+              "name": "Malevolence",
+              "time": "23:00 - 23:50",
+              "gridColumn": 145,
+              "gridSpan": 10
+            }
+          ]
+        },
+        {
+          "id": "hawk",
+          "name": "Hawk",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 97,
+              "name": "Trash Talk",
+              "time": "00:00 - 01:00",
+              "gridColumn": 157,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 46,
+              "name": "Belvedere",
+              "time": "12:45 - 13:25",
+              "gridColumn": 22,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 76,
+              "name": "Magnolia Park",
+              "time": "14:15 - 14:55",
+              "gridColumn": 40,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 95,
+              "name": "The Flatliners",
+              "time": "16:00 - 16:50",
+              "gridColumn": 61,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 94,
+              "name": "The Baboon Show",
+              "time": "18:00 - 18:50",
+              "gridColumn": 85,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 72,
+              "name": "Jaya the Cat",
+              "time": "20:00 - 20:50",
+              "gridColumn": 109,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 136,
+              "name": "Bad Nerves",
+              "time": "22:00 - 22:50",
+              "gridColumn": 133,
+              "gridSpan": 10
+            }
+          ]
+        },
+        {
+          "id": "sparrow",
+          "name": "Sparrow",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 146,
+              "name": "Paceshifters play Nirvana",
+              "time": "00:15 - 01:00",
+              "gridColumn": 160,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 138,
+              "name": "De Rooie Jager",
+              "time": "01:00 - 02:00",
+              "gridColumn": 169,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 144,
+              "name": "ILÆNDER",
+              "time": "12:30 - 13:00",
+              "gridColumn": 19,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 156,
+              "name": "Dwarves",
+              "time": "13:30 - 14:00",
+              "gridColumn": 31,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 147,
+              "name": "Politie Warnsveld",
+              "time": "14:30 - 15:00",
+              "gridColumn": 43,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 148,
+              "name": "Upchuck",
+              "time": "15:30 - 16:15",
+              "gridColumn": 55,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 145,
+              "name": "Kings of Schrobbeler",
+              "time": "16:45 - 17:30",
+              "gridColumn": 70,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 142,
+              "name": "Captain Kaiser",
+              "time": "18:15 - 19:00",
+              "gridColumn": 88,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 150,
+              "name": "Geishas of Doom ft. Rudeboy",
+              "time": "19:45 - 20:30",
+              "gridColumn": 106,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 143,
+              "name": "Grade 2",
+              "time": "21:15 - 22:00",
+              "gridColumn": 124,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 149,
+              "name": "Authority Zero",
+              "time": "22:45 - 23:30",
+              "gridColumn": 142,
+              "gridSpan": 9
+            }
+          ]
+        },
+        {
+          "id": "raven",
+          "name": "Raven",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 118,
+              "name": "ELLE RICH",
+              "time": "00:00 - 01:00",
+              "gridColumn": 157,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 124,
+              "name": "The Viper",
+              "time": "01:00 - 02:00",
+              "gridColumn": 169,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 122,
+              "name": "Real Paradise Group",
+              "time": "14:00 - 14:45",
+              "gridColumn": 37,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 114,
+              "name": "Q'n",
+              "time": "14:45 - 15:30",
+              "gridColumn": 46,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 115,
+              "name": "Andy & the Antichrist",
+              "time": "16:00 - 16:30",
+              "gridColumn": 61,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 120,
+              "name": "LeBlanc",
+              "time": "17:00 - 17:30",
+              "gridColumn": 73,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 119,
+              "name": "Fresku",
+              "time": "18:00 - 18:30",
+              "gridColumn": 85,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 117,
+              "name": "DeathbyRomy",
+              "time": "19:00 - 19:30",
+              "gridColumn": 97,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 116,
+              "name": "Code: Pandorum",
+              "time": "20:00 - 21:00",
+              "gridColumn": 109,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 123,
+              "name": "TDC INC.",
+              "time": "21:30 - 22:30",
+              "gridColumn": 127,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 121,
+              "name": "Parrish Smith LIVE",
+              "time": "23:00 - 00:00",
+              "gridColumn": 145,
+              "gridSpan": 12
+            }
+          ]
+        },
+        {
+          "id": "quail",
+          "name": "Quail",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 181,
+              "name": "Sad Songs Club Friday",
+              "time": "13:00 - 19:15",
+              "gridColumn": 25,
+              "gridSpan": 75
+            },
+            {
+              "bandId": 180,
+              "name": "Zjwieg",
+              "time": "19:15 - 19:45",
+              "gridColumn": 100,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 181,
+              "name": "Sad Songs Club Friday",
+              "time": "19:45 - 20:00",
+              "gridColumn": 106,
+              "gridSpan": 3
+            },
+            {
+              "bandId": 175,
+              "name": "GraafLandgraaf",
+              "time": "20:00 - 20:30",
+              "gridColumn": 109,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 181,
+              "name": "Sad Songs Club Friday",
+              "time": "20:30 - 21:00",
+              "gridColumn": 115,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 177,
+              "name": "Pyrus Malus",
+              "time": "21:00 - 21:30",
+              "gridColumn": 121,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 181,
+              "name": "Sad Songs Club Friday",
+              "time": "21:30 - 23:00",
+              "gridColumn": 127,
+              "gridSpan": 18
+            }
+          ]
+        },
+        {
+          "id": "nightingale",
+          "name": "Nightingale",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 181,
+              "name": "Sad Songs Club Friday",
+              "time": "00:00 - 04:00",
+              "gridColumn": 157,
+              "gridSpan": 48
+            }
+          ]
+        },
+        {
+          "id": "nozemturbotempel",
+          "name": "Nozem Turbo Tempel",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 186,
+              "name": "Meditation",
+              "time": "15:00 - 15:30",
+              "gridColumn": 49,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 187,
+              "name": "The Shivvies",
+              "time": "17:30 - 18:00",
+              "gridColumn": 79,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 188,
+              "name": "The Etters",
+              "time": "19:00 - 19:30",
+              "gridColumn": 97,
+              "gridSpan": 6
+            }
+          ]
+        },
+        {
+          "id": "impericonsigningsessions",
+          "name": "Impericon Signing Sessions",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 49,
+              "name": "Ice Nine Kills",
+              "time": "14:00 - 14:30",
+              "gridColumn": 37,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 78,
+              "name": "Melrose Avenue",
+              "time": "14:45 - 15:15",
+              "gridColumn": 46,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 69,
+              "name": "Hollywood Undead",
+              "time": "16:00 - 16:30",
+              "gridColumn": 61,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 77,
+              "name": "Malevolence",
+              "time": "17:15 - 17:45",
+              "gridColumn": 76,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 100,
+              "name": "TX2",
+              "time": "19:00 - 19:30",
+              "gridColumn": 97,
+              "gridSpan": 6
+            }
+          ]
+        }
+      ],
+      "title": "Friday",
+      "shortTitle": "Fri",
+      "date": "2026-06-26"
+    },
+    "SAT": {
+      "startTimestamp": 1782464400,
+      "endTimestamp": 1782522000,
+      "slotMinutes": 5,
+      "timeLabels": [
+        {
+          "gridColumn": 1,
+          "label": "11:00"
+        },
+        {
+          "gridColumn": 13,
+          "label": "12:00"
+        },
+        {
+          "gridColumn": 25,
+          "label": "13:00"
+        },
+        {
+          "gridColumn": 37,
+          "label": "14:00"
+        },
+        {
+          "gridColumn": 49,
+          "label": "15:00"
+        },
+        {
+          "gridColumn": 61,
+          "label": "16:00"
+        },
+        {
+          "gridColumn": 73,
+          "label": "17:00"
+        },
+        {
+          "gridColumn": 85,
+          "label": "18:00"
+        },
+        {
+          "gridColumn": 97,
+          "label": "19:00"
+        },
+        {
+          "gridColumn": 109,
+          "label": "20:00"
+        },
+        {
+          "gridColumn": 121,
+          "label": "21:00"
+        },
+        {
+          "gridColumn": 133,
+          "label": "22:00"
+        },
+        {
+          "gridColumn": 145,
+          "label": "23:00"
+        },
+        {
+          "gridColumn": 157,
+          "label": "00:00"
+        },
+        {
+          "gridColumn": 169,
+          "label": "01:00"
+        },
+        {
+          "gridColumn": 181,
+          "label": "02:00"
+        },
+        {
+          "gridColumn": 193,
+          "label": "03:00"
+        }
+      ],
+      "stages": [
+        {
+          "id": "eagle",
+          "name": "Eagle",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 40,
+              "name": "Papa Roach",
+              "time": "00:00 - 01:00",
+              "gridColumn": 157,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 84,
+              "name": "Rain City Drive",
+              "time": "12:45 - 13:25",
+              "gridColumn": 22,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 52,
+              "name": "Catch Your Breath",
+              "time": "14:15 - 14:55",
+              "gridColumn": 40,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 74,
+              "name": "La Dispute",
+              "time": "16:00 - 16:50",
+              "gridColumn": 61,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 71,
+              "name": "Imminence",
+              "time": "18:00 - 18:50",
+              "gridColumn": 85,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 31,
+              "name": "All Time Low",
+              "time": "20:00 - 20:50",
+              "gridColumn": 109,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 105,
+              "name": "Viagra Boys",
+              "time": "22:00 - 22:50",
+              "gridColumn": 133,
+              "gridSpan": 10
+            }
+          ]
+        },
+        {
+          "id": "vulture",
+          "name": "Vulture",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 79,
+              "name": "Mouth Culture",
+              "time": "12:00 - 12:40",
+              "gridColumn": 13,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 113,
+              "name": "Our Mirage",
+              "time": "13:30 - 14:10",
+              "gridColumn": 31,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 168,
+              "name": "ten56.",
+              "time": "15:00 - 15:50",
+              "gridColumn": 49,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 57,
+              "name": "Distant",
+              "time": "17:00 - 17:50",
+              "gridColumn": 73,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 111,
+              "name": "Kanonenfieber",
+              "time": "19:00 - 19:50",
+              "gridColumn": 97,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 99,
+              "name": "Turbonegro",
+              "time": "21:00 - 21:50",
+              "gridColumn": 121,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 33,
+              "name": "Hatebreed",
+              "time": "23:00 - 23:50",
+              "gridColumn": 145,
+              "gridSpan": 10
+            }
+          ]
+        },
+        {
+          "id": "buzzard",
+          "name": "Buzzard",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 106,
+              "name": "Even If We Lose",
+              "time": "12:00 - 12:40",
+              "gridColumn": 13,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 53,
+              "name": "Combust",
+              "time": "13:30 - 14:10",
+              "gridColumn": 31,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 55,
+              "name": "Desolated",
+              "time": "15:00 - 15:50",
+              "gridColumn": 49,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 166,
+              "name": "Doodseskader",
+              "time": "17:00 - 17:50",
+              "gridColumn": 73,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 60,
+              "name": "End It",
+              "time": "19:00 - 19:50",
+              "gridColumn": 97,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 103,
+              "name": "We Came As Romans",
+              "time": "21:00 - 21:50",
+              "gridColumn": 121,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 50,
+              "name": "Bob Vylan",
+              "time": "23:00 - 23:50",
+              "gridColumn": 145,
+              "gridSpan": 10
+            }
+          ]
+        },
+        {
+          "id": "hawk",
+          "name": "Hawk",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 63,
+              "name": "Get the Shot",
+              "time": "00:00 - 01:00",
+              "gridColumn": 157,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 90,
+              "name": "Sugar Spine",
+              "time": "12:45 - 13:25",
+              "gridColumn": 22,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 109,
+              "name": "Have Mercy",
+              "time": "14:15 - 14:55",
+              "gridColumn": 40,
+              "gridSpan": 8
+            },
+            {
+              "bandId": 112,
+              "name": "Trash Boat",
+              "time": "16:00 - 16:50",
+              "gridColumn": 61,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 62,
+              "name": "Free Throw",
+              "time": "18:00 - 18:50",
+              "gridColumn": 85,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 92,
+              "name": "Talco",
+              "time": "20:00 - 20:50",
+              "gridColumn": 109,
+              "gridSpan": 10
+            },
+            {
+              "bandId": 58,
+              "name": "Dog Eat Dog",
+              "time": "22:00 - 22:50",
+              "gridColumn": 133,
+              "gridSpan": 10
+            }
+          ]
+        },
+        {
+          "id": "sparrow",
+          "name": "Sparrow",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 155,
+              "name": "Alle Kleuren",
+              "time": "00:15 - 01:00",
+              "gridColumn": 160,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 138,
+              "name": "De Rooie Jager",
+              "time": "01:00 - 02:00",
+              "gridColumn": 169,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 167,
+              "name": "Torn From Oblivion",
+              "time": "12:00 - 12:30",
+              "gridColumn": 13,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 164,
+              "name": "Wijf",
+              "time": "13:00 - 13:30",
+              "gridColumn": 25,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 151,
+              "name": "Initiate",
+              "time": "14:00 - 14:30",
+              "gridColumn": 37,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 160,
+              "name": "TAXITAXI",
+              "time": "15:00 - 15:30",
+              "gridColumn": 49,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 162,
+              "name": "The JB Conspiracy",
+              "time": "16:00 - 16:45",
+              "gridColumn": 61,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 159,
+              "name": "RONKER",
+              "time": "17:15 - 18:00",
+              "gridColumn": 76,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 157,
+              "name": "Gabbertje",
+              "time": "18:15 - 18:45",
+              "gridColumn": 88,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 163,
+              "name": "unpeople",
+              "time": "19:00 - 19:45",
+              "gridColumn": 97,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 165,
+              "name": "Zeke",
+              "time": "20:15 - 21:00",
+              "gridColumn": 112,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 158,
+              "name": "Het Goede Doel",
+              "time": "21:30 - 22:15",
+              "gridColumn": 127,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 161,
+              "name": "The Aggrolites",
+              "time": "23:00 - 23:45",
+              "gridColumn": 145,
+              "gridSpan": 9
+            }
+          ]
+        },
+        {
+          "id": "raven",
+          "name": "Raven",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 125,
+              "name": "ALIIENMIA",
+              "time": "00:00 - 01:00",
+              "gridColumn": 157,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 132,
+              "name": "Panic",
+              "time": "01:00 - 02:00",
+              "gridColumn": 169,
+              "gridSpan": 12
+            },
+            {
+              "bandId": 122,
+              "name": "Real Paradise Group",
+              "time": "14:00 - 14:45",
+              "gridColumn": 37,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 126,
+              "name": "Clitteband",
+              "time": "14:45 - 15:30",
+              "gridColumn": 46,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 131,
+              "name": "Lola Doppelspitze",
+              "time": "16:00 - 16:30",
+              "gridColumn": 61,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 135,
+              "name": "Zalm",
+              "time": "17:00 - 17:30",
+              "gridColumn": 73,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 134,
+              "name": "Youth Code",
+              "time": "18:00 - 18:45",
+              "gridColumn": 85,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 133,
+              "name": "Ray Fuego",
+              "time": "19:00 - 19:45",
+              "gridColumn": 97,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 128,
+              "name": "Jawat!",
+              "time": "20:00 - 20:45",
+              "gridColumn": 109,
+              "gridSpan": 9
+            },
+            {
+              "bandId": 130,
+              "name": "Kleine Crack & Slagter",
+              "time": "21:30 - 22:00",
+              "gridColumn": 127,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 127,
+              "name": "Gierboys",
+              "time": "22:15 - 22:45",
+              "gridColumn": 136,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 129,
+              "name": "KABOUTERTJE PUTLUCHT",
+              "time": "23:15 - 00:00",
+              "gridColumn": 148,
+              "gridSpan": 9
+            }
+          ]
+        },
+        {
+          "id": "quail",
+          "name": "Quail",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 182,
+              "name": "Sad Songs Club Saturday",
+              "time": "13:00 - 19:00",
+              "gridColumn": 25,
+              "gridSpan": 72
+            },
+            {
+              "bandId": 179,
+              "name": "Zeldzame",
+              "time": "19:00 - 19:30",
+              "gridColumn": 97,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 182,
+              "name": "Sad Songs Club Saturday",
+              "time": "19:30 - 20:00",
+              "gridColumn": 103,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 174,
+              "name": "Failed Territory",
+              "time": "20:00 - 20:30",
+              "gridColumn": 109,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 182,
+              "name": "Sad Songs Club Saturday",
+              "time": "20:30 - 21:00",
+              "gridColumn": 115,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 172,
+              "name": "A Minor Problem",
+              "time": "21:00 - 21:30",
+              "gridColumn": 121,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 182,
+              "name": "Sad Songs Club Saturday",
+              "time": "21:30 - 23:00",
+              "gridColumn": 127,
+              "gridSpan": 18
+            }
+          ]
+        },
+        {
+          "id": "nightingale",
+          "name": "Nightingale",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 182,
+              "name": "Sad Songs Club Saturday",
+              "time": "00:00 - 04:00",
+              "gridColumn": 157,
+              "gridSpan": 48
+            }
+          ]
+        },
+        {
+          "id": "nozemturbotempel",
+          "name": "Nozem Turbo Tempel",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 189,
+              "name": "Sick Shooters",
+              "time": "15:30 - 16:00",
+              "gridColumn": 55,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 190,
+              "name": "Hard Shoulder",
+              "time": "16:45 - 17:15",
+              "gridColumn": 70,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 191,
+              "name": "Surprise Act",
+              "time": "19:45 - 20:15",
+              "gridColumn": 106,
+              "gridSpan": 6
+            }
+          ]
+        },
+        {
+          "id": "impericonsigningsessions",
+          "name": "Impericon Signing Sessions",
+          "columnCount": 192,
+          "performances": [
+            {
+              "bandId": 71,
+              "name": "Imminence",
+              "time": "14:00 - 14:30",
+              "gridColumn": 37,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 84,
+              "name": "Rain City Drive",
+              "time": "15:30 - 16:00",
+              "gridColumn": 55,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 52,
+              "name": "Catch Your Breath",
+              "time": "16:30 - 17:00",
+              "gridColumn": 67,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 105,
+              "name": "Viagra Boys",
+              "time": "18:00 - 18:30",
+              "gridColumn": 85,
+              "gridSpan": 6
+            },
+            {
+              "bandId": 57,
+              "name": "Distant",
+              "time": "19:00 - 19:30",
+              "gridColumn": 97,
+              "gridSpan": 6
+            }
+          ]
+        }
+      ],
+      "title": "Saturday",
+      "shortTitle": "Sat",
+      "date": "2026-06-27"
+    }
+  }
+}
