@@ -9,41 +9,62 @@ struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 0) {
-                dayTabBar
-
-                if let error = store.loadError {
-                    Spacer()
-                    ContentUnavailableView("Could not load timetable", systemImage: "exclamationmark.triangle", description: Text(error))
-                    Spacer()
-                } else if let timetable = store.timetable(for: selectedDay) {
-                    TimetableDayContainerView(
-                        timetable: timetable,
-                        selectedDay: selectedDay,
-                        isCurrentFestivalDay: selectedDay == FestivalDay.currentFestivalDay,
-                        scrollTrigger: scrollTrigger,
-                        favorites: favorites,
-                        displayMode: $displayMode
-                    )
-                } else {
-                    Spacer()
-                    ProgressView()
-                    Spacer()
-                }
+        TabView {
+            NavigationStack {
+                timetableTab
             }
-            .background(JeraTheme.bodyColor1.ignoresSafeArea())
-            .navigationTitle("Timetable")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(JeraTheme.bodyColor1, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .tabItem {
+                Label("Timetable", systemImage: "calendar")
+            }
+
+            NavigationStack {
+                FavoritesView(store: store, favorites: favorites)
+            }
+            .tabItem {
+                Label("Favorites", systemImage: "star.fill")
+            }
         }
+        .tint(JeraTheme.accentGold)
         .onAppear(perform: focusCurrentDay)
         .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .active {
                 focusCurrentDay()
             }
         }
+    }
+
+    private var timetableTab: some View {
+        VStack(spacing: 0) {
+            dayTabBar
+
+            if let error = store.loadError {
+                Spacer()
+                ContentUnavailableView(
+                    "Could not load timetable",
+                    systemImage: "exclamationmark.triangle",
+                    description: Text(error)
+                )
+                Spacer()
+            } else if let timetable = store.timetable(for: selectedDay) {
+                TimetableDayContainerView(
+                    timetable: timetable,
+                    selectedDay: selectedDay,
+                    isCurrentFestivalDay: selectedDay == FestivalDay.currentFestivalDay,
+                    scrollTrigger: scrollTrigger,
+                    favorites: favorites,
+                    displayMode: $displayMode
+                )
+            } else {
+                Spacer()
+                ProgressView()
+                Spacer()
+            }
+        }
+        .background(JeraTheme.bodyColor1.ignoresSafeArea())
+        .navigationTitle("Timetable")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(JeraTheme.bodyColor1, for: .navigationBar)
+        .toolbarColorScheme(.dark, for: .navigationBar)
     }
 
     private var dayTabBar: some View {
