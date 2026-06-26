@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var store = TimetableStore()
+    @StateObject private var favorites = FavoritesStore()
     @State private var selectedDay = FestivalDay.currentFestivalDay
     @State private var scrollTrigger = UUID()
     @State private var displayMode: TimetableDisplayMode = .grid
@@ -22,6 +23,7 @@ struct ContentView: View {
                         selectedDay: selectedDay,
                         isCurrentFestivalDay: selectedDay == FestivalDay.currentFestivalDay,
                         scrollTrigger: scrollTrigger,
+                        favorites: favorites,
                         displayMode: $displayMode
                     )
                 } else {

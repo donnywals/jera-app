@@ -1,6 +1,6 @@
 import Foundation
 
-enum FestivalDay: String, CaseIterable, Identifiable {
+enum FestivalDay: String, CaseIterable, Identifiable, Codable {
     case thu = "THU"
     case fri = "FRI"
     case sat = "SAT"

@@ -5,6 +5,7 @@ struct TimetableDayView: View {
     let selectedDay: FestivalDay
     let isCurrentFestivalDay: Bool
     let scrollTrigger: UUID
+    @ObservedObject var favorites: FavoritesStore
 
     @State private var now = Date()
     @State private var didInitialScroll = false
@@ -139,27 +140,36 @@ struct TimetableDayView: View {
         let width = CGFloat(performance.gridSpan) * JeraTheme.slotWidth
         let x = xOffset(for: performance.gridColumn)
 
-        return VStack(alignment: .leading, spacing: 4) {
-            Text(performance.name)
-                .font(.system(.caption, design: .rounded, weight: .heavy))
-                .textCase(.uppercase)
-                .lineLimit(2)
-                .minimumScaleFactor(0.75)
-                .foregroundStyle(JeraTheme.bodyColor1)
+        return ZStack(alignment: .topTrailing) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text(performance.name)
+                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .textCase(.uppercase)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.75)
+                    .foregroundStyle(JeraTheme.bodyColor1)
 
-            Text(performance.time)
-                .font(.system(.caption2, design: .monospaced))
-                .lineLimit(1)
-                .minimumScaleFactor(0.8)
-                .foregroundStyle(JeraTheme.bodyColor1.opacity(0.85))
+                Text(performance.time)
+                    .font(.system(.caption2, design: .monospaced))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+                    .foregroundStyle(JeraTheme.bodyColor1.opacity(0.85))
+            }
+            .padding(.horizontal, 8)
+            .padding(.vertical, 8)
+            .frame(width: max(width - 4, 56), alignment: .leading)
+            .frame(maxHeight: JeraTheme.stageHeight * 0.8)
+            .background(JeraTheme.accentGold)
+            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+            .shadow(color: .black.opacity(0.15), radius: 8, y: 2)
+
+            FavoriteButton(
+                favorites: favorites,
+                day: selectedDay,
+                bandId: performance.bandId
+            )
+            .padding(4)
         }
-        .padding(.horizontal, 8)
-        .padding(.vertical, 8)
-        .frame(width: max(width - 4, 56), alignment: .leading)
-        .frame(maxHeight: JeraTheme.stageHeight * 0.8)
-        .background(JeraTheme.accentGold)
-        .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
-        .shadow(color: .black.opacity(0.15), radius: 8, y: 2)
         .offset(x: x + 2, y: JeraTheme.stageHeight * 0.1)
     }
 

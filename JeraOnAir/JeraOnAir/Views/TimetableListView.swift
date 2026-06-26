@@ -2,6 +2,8 @@ import SwiftUI
 
 struct TimetableListView: View {
     let timetable: DayTimetable
+    let selectedDay: FestivalDay
+    @ObservedObject var favorites: FavoritesStore
 
     var body: some View {
         List {
@@ -10,7 +12,13 @@ struct TimetableListView: View {
                     bandName: item.performance.name,
                     time: item.performance.time,
                     stageName: item.stageName
-                )
+                ) {
+                    FavoriteButton(
+                        favorites: favorites,
+                        day: selectedDay,
+                        bandId: item.performance.bandId
+                    )
+                }
                 .listRowBackground(JeraTheme.bodyColor2)
             }
         }
@@ -20,22 +28,22 @@ struct TimetableListView: View {
     }
 }
 
-struct PerformanceListRow: View {
+struct PerformanceListRow<Trailing: View>: View {
     let bandName: String
     let time: String
     let stageName: String
-    var trailingContent: AnyView?
+    @ViewBuilder var trailing: () -> Trailing
 
     init(
         bandName: String,
         time: String,
         stageName: String,
-        trailingContent: AnyView? = nil
+        @ViewBuilder trailing: @escaping () -> Trailing = { EmptyView() }
     ) {
         self.bandName = bandName
         self.time = time
         self.stageName = stageName
-        self.trailingContent = trailingContent
+        self.trailing = trailing
     }
 
     var body: some View {
@@ -60,9 +68,7 @@ struct PerformanceListRow: View {
 
             Spacer(minLength: 8)
 
-            if let trailingContent {
-                trailingContent
-            }
+            trailing()
         }
         .padding(.vertical, 4)
     }

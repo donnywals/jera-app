@@ -5,6 +5,7 @@ struct TimetableDayContainerView: View {
     let selectedDay: FestivalDay
     let isCurrentFestivalDay: Bool
     let scrollTrigger: UUID
+    @ObservedObject var favorites: FavoritesStore
 
     @Binding var displayMode: TimetableDisplayMode
 
@@ -20,10 +21,15 @@ struct TimetableDayContainerView: View {
                     timetable: timetable,
                     selectedDay: selectedDay,
                     isCurrentFestivalDay: isCurrentFestivalDay,
-                    scrollTrigger: scrollTrigger
+                    scrollTrigger: scrollTrigger,
+                    favorites: favorites
                 )
             case .list:
-                TimetableListView(timetable: timetable)
+                TimetableListView(
+                    timetable: timetable,
+                    selectedDay: selectedDay,
+                    favorites: favorites
+                )
             }
         }
     }

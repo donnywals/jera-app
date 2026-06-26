@@ -16,6 +16,8 @@
 		A10000000000000000000007 /* timetable.json in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000007 /* timetable.json */; };
 		A10000000000000000000008 /* TimetableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* TimetableListView.swift */; };
 		A10000000000000000000009 /* TimetableDayContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* TimetableDayContainerView.swift */; };
+		A10000000000000000000010 /* FavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* FavoritesStore.swift */; };
+		A10000000000000000000011 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		A20000000000000000000008 /* JeraOnAir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeraOnAir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20000000000000000000009 /* TimetableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableListView.swift; sourceTree = "<group>"; };
 		A20000000000000000000010 /* TimetableDayContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableDayContainerView.swift; sourceTree = "<group>"; };
+		A20000000000000000000011 /* FavoritesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStore.swift; sourceTree = "<group>"; };
+		A20000000000000000000012 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				A20000000000000000000003 /* TimetableModels.swift */,
+				A20000000000000000000011 /* FavoritesStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 				A20000000000000000000004 /* TimetableDayView.swift */,
 				A20000000000000000000009 /* TimetableListView.swift */,
 				A20000000000000000000010 /* TimetableDayContainerView.swift */,
+				A20000000000000000000012 /* FavoriteButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +181,8 @@
 				A10000000000000000000005 /* JeraTheme.swift in Sources */,
 				A10000000000000000000008 /* TimetableListView.swift in Sources */,
 				A10000000000000000000009 /* TimetableDayContainerView.swift in Sources */,
+				A10000000000000000000010 /* FavoritesStore.swift in Sources */,
+				A10000000000000000000011 /* FavoriteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
