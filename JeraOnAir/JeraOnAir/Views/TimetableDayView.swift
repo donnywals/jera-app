@@ -8,91 +8,78 @@ struct TimetableDayView: View {
 
     @State private var now = Date()
     @State private var didInitialScroll = false
+    @State private var timelineScrollID: String?
 
     private let scrollAnchorID = "current-time-anchor"
 
-    private var visibleTimeLabels: [TimeLabel] {
-        timetable.timeLabels.filter { label in
-            !(label.gridColumn == timetable.timeLabels.first?.gridColumn ||
-              label.gridColumn == timetable.timeLabels.last?.gridColumn)
-        }
-    }
-
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            VStack(alignment: .leading, spacing: 0) {
-            Text(timetable.title)
-                .font(.system(.title3, design: .rounded, weight: .bold))
-                .foregroundStyle(JeraTheme.textPrimary)
-                .padding(.horizontal, 16)
-                .padding(.bottom, 8)
+            VStack(alignment: .leading, spacing: 20) {
+                Text(timetable.title)
+                    .font(.system(.title3, design: .rounded, weight: .bold))
+                    .foregroundStyle(JeraTheme.textPrimary)
+                    .padding(.horizontal, 16)
 
-            HStack(spacing: 0) {
-                stageLabelsColumn
-
-                ScrollViewReader { proxy in
-                    ScrollView(.horizontal, showsIndicators: true) {
-                        ZStack(alignment: .topLeading) {
-                            VStack(spacing: 0) {
-                                timeHeader
-                                stageRows
-                            }
-                            .frame(width: timetable.gridWidth)
-
-                            if isCurrentFestivalDay, let progress = timetable.progress(for: now) {
-                                currentTimeIndicator(progress: progress)
-                            }
-                        }
-                    }
-                    .background(JeraTheme.bodyColor2)
-                    .clipShape(RoundedRectangle(cornerRadius: JeraTheme.cornerRadius, style: .continuous))
-                    .onAppear {
-                        performInitialScroll(with: proxy)
-                    }
-                    .onChange(of: selectedDay) { _, _ in
-                        didInitialScroll = false
-                        performInitialScroll(with: proxy)
-                    }
-                    .onChange(of: scrollTrigger) { _, _ in
-                        didInitialScroll = false
-                        performInitialScroll(with: proxy)
-                    }
+                ForEach(timetable.stages) { stage in
+                    stageSection(stage)
                 }
-            }
-            .padding(.horizontal, 12)
 
-            Text("Times are subject to change. Keep an eye on jeraonair.nl for updates.")
-                .font(.caption2)
-                .foregroundStyle(JeraTheme.textSecondary)
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .padding(.horizontal, 16)
-                .padding(.top, 10)
-                .padding(.bottom, 16)
+                Text("Times are subject to change. Keep an eye on jeraonair.nl for updates.")
+                    .font(.caption2)
+                    .foregroundStyle(JeraTheme.textSecondary)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .padding(.horizontal, 16)
+                    .padding(.bottom, 16)
             }
+            .padding(.top, 4)
+        }
+        .onAppear(perform: scheduleInitialScroll)
+        .onChange(of: selectedDay) { _, _ in
+            didInitialScroll = false
+            scheduleInitialScroll()
+        }
+        .onChange(of: scrollTrigger) { _, _ in
+            didInitialScroll = false
+            scheduleInitialScroll()
         }
         .onReceive(Timer.publish(every: 30, on: .main, in: .common).autoconnect()) { date in
             now = date
         }
     }
 
-    private var stageLabelsColumn: some View {
-        VStack(spacing: 0) {
-            Color.clear
-                .frame(height: JeraTheme.timeHeaderHeight)
+    private func stageSection(_ stage: Stage) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(stage.name)
+                .font(.system(.headline, design: .rounded, weight: .heavy))
+                .textCase(.uppercase)
+                .foregroundStyle(JeraTheme.textPrimary)
+                .padding(.horizontal, 16)
 
-            ForEach(timetable.stages) { stage in
-                Text(stage.name)
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .textCase(.uppercase)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(3)
-                    .minimumScaleFactor(0.7)
-                    .foregroundStyle(JeraTheme.textPrimary)
-                    .shadow(color: JeraTheme.bodyColor1, radius: 8)
-                    .frame(width: JeraTheme.stageLabelWidth, height: JeraTheme.stageHeight)
+            ScrollView(.horizontal, showsIndicators: true) {
+                ZStack(alignment: .topLeading) {
+                    VStack(spacing: 0) {
+                        timeHeader
+                        stageRow(for: stage)
+                    }
+                    .frame(width: timetable.gridWidth)
+
+                    if isCurrentFestivalDay, let progress = timetable.progress(for: now) {
+                        currentTimeIndicator(progress: progress)
+                    }
+                }
             }
+            .scrollPosition(id: $timelineScrollID, anchor: .center)
+            .background(JeraTheme.bodyColor2)
+            .clipShape(RoundedRectangle(cornerRadius: JeraTheme.cornerRadius, style: .continuous))
+            .padding(.horizontal, 12)
         }
-        .padding(.trailing, 6)
+    }
+
+    private var visibleTimeLabels: [TimeLabel] {
+        timetable.timeLabels.filter { label in
+            !(label.gridColumn == timetable.timeLabels.first?.gridColumn ||
+              label.gridColumn == timetable.timeLabels.last?.gridColumn)
+        }
     }
 
     private var timeHeader: some View {
@@ -111,38 +98,30 @@ struct TimetableDayView: View {
         .frame(height: JeraTheme.timeHeaderHeight)
     }
 
-    private var stageRows: some View {
-        ZStack(alignment: .topLeading) {
-            VStack(spacing: 0) {
-                ForEach(timetable.stages) { stage in
-                    stageRowBackground
-                }
-            }
+    private func stageRow(for stage: Stage) -> some View {
+        ZStack(alignment: .leading) {
+            stageRowBackground(columnCount: stage.columnCount)
 
-            VStack(spacing: 0) {
-                ForEach(timetable.stages) { stage in
-                    ZStack(alignment: .leading) {
-                        Color.clear
-                            .frame(height: JeraTheme.stageHeight)
-
-                        ForEach(stage.performances) { performance in
-                            performanceBlock(performance)
-                        }
-                    }
+            ZStack(alignment: .leading) {
+                Color.clear
                     .frame(height: JeraTheme.stageHeight)
+
+                ForEach(stage.performances) { performance in
+                    performanceBlock(performance)
                 }
             }
+            .frame(height: JeraTheme.stageHeight)
         }
     }
 
-    private var stageRowBackground: some View {
+    private func stageRowBackground(columnCount: Int) -> some View {
         ZStack(alignment: .leading) {
             Rectangle()
                 .fill(JeraTheme.bodyColor2)
                 .frame(height: JeraTheme.stageHeight)
 
             HStack(spacing: 0) {
-                ForEach(0..<(timetable.stages.first?.columnCount ?? 144), id: \.self) { index in
+                ForEach(0..<columnCount, id: \.self) { index in
                     Rectangle()
                         .fill(JeraTheme.bodyColor1.opacity(index.isMultiple(of: 2) ? 0.35 : 0.15))
                         .frame(width: index.isMultiple(of: 12) ? 2 : 1)
@@ -185,14 +164,12 @@ struct TimetableDayView: View {
     }
 
     private func currentTimeIndicator(progress: Double) -> some View {
-        let x = timetable.gridWidth * progress
-
-        return Rectangle()
+        Rectangle()
             .fill(JeraTheme.currentTimeLine)
             .frame(width: 2)
             .frame(maxHeight: .infinity)
             .shadow(color: .red.opacity(0.45), radius: 6)
-            .offset(x: x)
+            .offset(x: timetable.gridWidth * progress)
             .id(scrollAnchorID)
             .allowsHitTesting(false)
     }
@@ -201,12 +178,12 @@ struct TimetableDayView: View {
         CGFloat(gridColumn - 1) * JeraTheme.slotWidth
     }
 
-    private func performInitialScroll(with proxy: ScrollViewProxy) {
+    private func scheduleInitialScroll() {
         guard !didInitialScroll else { return }
         guard isCurrentFestivalDay, timetable.isLive(at: now) else { return }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-            proxy.scrollTo(scrollAnchorID, anchor: .center)
+            timelineScrollID = scrollAnchorID
             didInitialScroll = true
         }
     }
