@@ -4,6 +4,7 @@ struct ContentView: View {
     @StateObject private var store = TimetableStore()
     @State private var selectedDay = FestivalDay.currentFestivalDay
     @State private var scrollTrigger = UUID()
+    @State private var displayMode: TimetableDisplayMode = .grid
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
@@ -15,12 +16,13 @@ struct ContentView: View {
                     Spacer()
                     ContentUnavailableView("Could not load timetable", systemImage: "exclamationmark.triangle", description: Text(error))
                     Spacer()
-                } else                 if let timetable = store.timetable(for: selectedDay) {
-                    TimetableDayView(
+                } else if let timetable = store.timetable(for: selectedDay) {
+                    TimetableDayContainerView(
                         timetable: timetable,
                         selectedDay: selectedDay,
                         isCurrentFestivalDay: selectedDay == FestivalDay.currentFestivalDay,
-                        scrollTrigger: scrollTrigger
+                        scrollTrigger: scrollTrigger,
+                        displayMode: $displayMode
                     )
                 } else {
                     Spacer()

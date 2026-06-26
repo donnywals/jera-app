@@ -81,6 +81,19 @@ struct DayTimetable: Decodable {
     func isLive(at date: Date = .now) -> Bool {
         progress(for: date) != nil
     }
+
+    var scheduledPerformances: [ScheduledPerformance] {
+        stages.flatMap { stage in
+            stage.performances.map { performance in
+                ScheduledPerformance(
+                    stageID: stage.id,
+                    stageName: stage.name,
+                    performance: performance
+                )
+            }
+        }
+        .sorted { $0.startDate(in: self) < $1.startDate(in: self) }
+    }
 }
 
 struct TimeLabel: Decodable, Identifiable {
@@ -97,7 +110,7 @@ struct Stage: Decodable, Identifiable {
     let performances: [Performance]
 }
 
-struct Performance: Decodable, Identifiable {
+struct Performance: Decodable, Identifiable, Hashable {
     let bandId: Int
     let name: String
     let time: String
@@ -105,6 +118,44 @@ struct Performance: Decodable, Identifiable {
     let gridSpan: Int
 
     var id: Int { bandId }
+
+    func startDate(in timetable: DayTimetable) -> Date {
+        let offsetSeconds = Double((gridColumn - 1) * timetable.slotMinutes * 60)
+        return Date(timeIntervalSince1970: timetable.startTimestamp + offsetSeconds)
+    }
+}
+
+struct ScheduledPerformance: Identifiable, Hashable {
+    let stageID: String
+    let stageName: String
+    let performance: Performance
+
+    var id: Int { performance.bandId }
+
+    func startDate(in timetable: DayTimetable) -> Date {
+        performance.startDate(in: timetable)
+    }
+}
+
+enum TimetableDisplayMode: String, CaseIterable, Identifiable {
+    case grid
+    case list
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .grid: "Grid"
+        case .list: "List"
+        }
+    }
+
+    var systemImage: String {
+        switch self {
+        case .grid: "calendar.day.timeline.left"
+        case .list: "list.bullet"
+        }
+    }
 }
 
 @MainActor
