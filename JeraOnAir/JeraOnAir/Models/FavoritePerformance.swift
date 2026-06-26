@@ -17,20 +17,19 @@ struct FavoritePerformance: Identifiable, Hashable {
 extension TimetableStore {
     func favoritePerformances(using favorites: FavoritesStore) -> [FavoritePerformance] {
         favorites.favorites.compactMap { key in
-            guard let timetable = timetable(for: key.festivalDay),
-                  let match = timetable.stages.compactMap({ stage -> FavoritePerformance? in
-                      guard let performance = stage.performances.first(where: { $0.bandId == key.bandId }) else {
-                          return nil
-                      }
-                      return FavoritePerformance(
-                          festivalDay: key.festivalDay,
-                          stageName: stage.name,
-                          performance: performance
-                      )
-                  }).first else {
-                return nil
+            guard let timetable = timetable(for: key.festivalDay) else { return nil }
+
+            for stage in timetable.stages {
+                guard let performance = stage.performances.first(where: { $0.bandId == key.bandId }) else {
+                    continue
+                }
+                return FavoritePerformance(
+                    festivalDay: key.festivalDay,
+                    stageName: stage.name,
+                    performance: performance
+                )
             }
-            return match
+            return nil
         }
         .sorted { lhs, rhs in
             let dayOrder = FestivalDay.allCases

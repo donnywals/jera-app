@@ -11,7 +11,6 @@ enum JeraTheme {
 
     static let stageHeight: CGFloat = 100
     static let timeHeaderHeight: CGFloat = 36
-    static let stageLabelWidth: CGFloat = 108
     static let slotWidth: CGFloat = 7
     static let cornerRadius: CGFloat = 10
 }

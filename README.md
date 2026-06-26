@@ -6,15 +6,17 @@ A simple iOS app that shows the [Jera On Air 2026](https://www.jeraonair.nl/nl/t
 
 Captured on iPhone 17 Pro Max simulator.
 
-| Friday (auto-selected on festival days) | Thursday | Saturday |
+| Grid (stage sections) | List (by start time) | Favorites |
 | --- | --- | --- |
-| ![Friday timetable](docs/screenshots/friday.png) | ![Thursday timetable](docs/screenshots/thursday.png) | ![Saturday timetable](docs/screenshots/saturday.png) |
+| ![Grid layout](docs/screenshots/grid-layout.png) | ![List view](docs/screenshots/list-view.png) | ![Favorites](docs/screenshots/favorites.png) |
 
 ## Features
 
 - Day tabs (THU / FRI / SAT) styled like the festival website
-- Grid timetable with stages as rows and time as columns
-- Gold performance blocks with band name and time range
+- Grid view with stage names as section headers and horizontal timelines underneath
+- List view sorted by band start time, with stage name on each row
+- Star favorites persisted between launches
+- Bottom tab bar with Timetable and Favorites screens
 - Red current-time marker during live festival hours
 - Automatically selects today's festival day when you open the app
 - Automatically scrolls horizontally to the current time on the active day
@@ -47,7 +49,10 @@ Then rebuild the app in Xcode.
 ## Project layout
 
 - `JeraOnAir/JeraOnAirApp.swift` — app entry point
-- `JeraOnAir/ContentView.swift` — day tab bar and navigation
-- `JeraOnAir/Views/TimetableDayView.swift` — scrollable grid timetable
+- `JeraOnAir/ContentView.swift` — tab bar and day selection
+- `JeraOnAir/Views/TimetableDayView.swift` — grid timetable with stage sections
+- `JeraOnAir/Views/TimetableListView.swift` — chronological list view
+- `JeraOnAir/Views/FavoritesView.swift` — favorited bands list
 - `JeraOnAir/Models/TimetableModels.swift` — data models and loader
+- `JeraOnAir/Models/FavoritesStore.swift` — favorite persistence
 - `JeraOnAir/timetable.json` — bundled timetable for all three days
