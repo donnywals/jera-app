@@ -155,9 +155,9 @@ struct TimetableDayView: View {
                     .minimumScaleFactor(0.8)
                     .foregroundStyle(JeraTheme.bodyColor1.opacity(0.85))
             }
-            .padding(.horizontal, 8)
+            .padding(.horizontal, 6)
             .padding(.vertical, 8)
-            .frame(width: max(width - 4, 56), alignment: .leading)
+            .frame(width: max(width, 76), alignment: .leading)
             .frame(maxHeight: JeraTheme.stageHeight * 0.8)
             .background(JeraTheme.accentGold)
             .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
